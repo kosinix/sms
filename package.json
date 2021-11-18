@@ -1,0 +1,24 @@
+{
+  "name": "sms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kosinix/sms.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kosinix/sms/issues"
+  },
+  "homepage": "https://github.com/kosinix/sms#readme",
+  "dependencies": {
+    "say": "^0.16.0",
+    "serialport-gsm": "^3.4.1"
+  }
+}
