@@ -1,4 +1,4 @@
-// node index.js
+// node send.js
 const serialportgsm = require('serialport-gsm');
 
 
@@ -41,18 +41,21 @@ const serialportgsm = require('serialport-gsm');
             console.log('deleteAllSimMessages', result.data)
 
             result = await modem.getModemSerial()
-            console.log('modem serial', result.data.modemSerial)
+            console.log('getModemSerial', result.data.modemSerial)
 
             result = await modem.getNetworkSignal()
-            console.log('signal', result.data)
+            console.log('getNetworkSignal', result.data)
 
             result = await modem.getOwnNumber()
             console.log('getOwnNumber', result.data)
 
+            result = await modem.sendSMS('+639106189160', 'Hello there from sim 800c!', false)
+            console.log('sendSMS', result)
+
         })
 
         modem.on('onSendingMessage', async result => {
-            console.log(result)
+            console.log('onSendingMessage', result)
         })
 
         modem.on('onNewMessage', async result => {
